@@ -4,7 +4,7 @@
 
 単なる「脆弱なWebアプリ」ではなく、**サイバーキルチェーン（偵察〜内部探索〜権限昇格）** という攻撃の全体像をハンズオンで学ぶための環境として設計しています。
 
-n📖 **プレゼンテーションスライド**: [こちらからブラウザで閲覧できます](https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPOSITORY_NAME>/)
+n📖 **プレゼンテーションスライド**: [こちらからブラウザで閲覧できます](https://senntomann.github.io/cyber-killchain-demo-lab/)
 
 ## 🎯 プロジェクトの目的とアピールポイント
 
