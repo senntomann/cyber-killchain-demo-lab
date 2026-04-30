@@ -1,0 +1,9 @@
+admin
+backup
+cgi-bin
+drupal
+login
+payroll_app.php
+phpmyadmin
+server-status
+uploads

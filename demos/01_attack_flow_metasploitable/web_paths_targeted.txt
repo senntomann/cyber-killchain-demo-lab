@@ -1,0 +1,16 @@
+admin
+backup
+cgi-bin
+db
+debug
+dev
+drupal
+login
+mysql
+payroll
+payroll_app
+phpmyadmin
+portal
+server-status
+test
+uploads

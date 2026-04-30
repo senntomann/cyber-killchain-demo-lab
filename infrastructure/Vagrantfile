@@ -1,0 +1,41 @@
+# This Vagrantfile can be used to quickly spin up a development instance of ub1404
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "Metasploitable3-dev"
+  config.vm.box = "bento/ubuntu-14.04"
+  config.vm.box_version = "201808.24.0"
+
+  config.vm.provider :libvirt do |libvirt, override|
+    override.vm.box = "peru/ubuntu-14.04-server-amd64"
+    override.vm.box_version = "20190901.01"
+    libvirt.memory = 2048
+  end
+
+  config.ssh.username = 'zeijyaku'
+  config.ssh.password = 'zeijyaku'
+  config.ssh.extra_args = ["-o", "PubkeyAcceptedKeyTypes=+ssh-rsa", "-o", "HostKeyAlgorithms=+ssh-rsa"]
+  config.vm.network "forwarded_port", guest: 21, host:2121
+
+  # manually rsync recipe changes before re-provisioning. e.g.,
+  # `vagrant rsync && vagrant provision`
+  config.vm.provision "chef_solo" do |chef|
+    chef.synced_folder_type = "rsync"
+    chef.cookbooks_path = [ '../../cookbooks' ]
+
+    chef.add_recipe "apt::default"
+    chef.add_recipe "iptables::default"
+    chef.add_recipe "metasploitable::users"
+    chef.add_recipe "metasploitable::mysql"
+    chef.add_recipe "metasploitable::apache"
+    chef.add_recipe "metasploitable::php_545"
+    chef.add_recipe "metasploitable::samba"
+    chef.add_recipe "metasploitable::payroll_app"
+    chef.add_recipe "metasploitable::cron_privesc"
+    chef.add_recipe "metasploitable::iptables"
+    chef.add_recipe "metasploitable::clear_cache"
+  end
+
+  # Disable NFS sharing (==> default: Mounting NFS shared folders...)
+  config.vm.synced_folder ".", "/vagrant", type: "nfs", disabled: true
+end
