@@ -12,5 +12,7 @@ payroll_app
 phpmyadmin
 portal
 server-status
+staff
+staff_result
 test
 uploads

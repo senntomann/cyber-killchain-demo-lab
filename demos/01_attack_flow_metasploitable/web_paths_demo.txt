@@ -6,4 +6,6 @@ login
 payroll_app.php
 phpmyadmin
 server-status
+staff.php
+staff_result.php
 uploads
