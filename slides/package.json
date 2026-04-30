@@ -1,0 +1,20 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "このディレクトリには、研究室メンバー向けの説明スライドを置く。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "slidev --open false",
+    "build": "slidev build",
+    "export": "slidev export",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@slidev/cli": "^52.15.0",
+    "@slidev/theme-seriph": "^0.25.0"
+  }
+}
