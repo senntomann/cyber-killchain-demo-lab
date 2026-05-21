@@ -8,9 +8,6 @@
 ## Live Materials
 
 - [プレゼンテーションスライド](https://senntomann.github.io/cyber-killchain-demo-lab/)
-- [デモ手順書](./demos/01_attack_flow_metasploitable/README.md)
-- [脆弱Webアプリケーション](./src/web_app/)
-- [VM構築・カスタマイズ用IaC](./infrastructure/)
 
 ## What I Built
 
