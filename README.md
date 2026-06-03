@@ -30,19 +30,19 @@
 
 このデモは、単発の脆弱性検証ではなく、攻撃者が段階的に情報を集めて侵入範囲を広げる流れを学ぶことを目的にしています。
 
-1. **Reconnaissance**  
+1. **偵察**  
    `nmap` を用いて、対象VMで公開されているポートとサービスを確認します。
 
-2. **Enumeration**  
+2. **列挙**  
    `gobuster` を用いて、トップページからリンクされていない職員向けページを発見します。
 
-3. **Exploitation**  
+3. **武装化**  
    PHPアプリの入力値がOSコマンドへ直接連結されていることを利用し、OSコマンドインジェクションを実行します。
 
-4. **Command Execution / C2 Concept**  
+4. **攻撃**  
    Webサーバ権限でコマンドが実行できることを確認し、リバースシェルの考え方を説明します。
 
-5. **Internal Discovery and Privilege Escalation Risk**  
+5. **権限昇格**  
    `www-data` 権限で内部ファイルを確認し、rootが定期実行するcronスクリプトの権限設定ミスを発見します。
 
 ## Repository Structure
